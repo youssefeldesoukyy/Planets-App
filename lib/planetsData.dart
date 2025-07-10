@@ -1,14 +1,15 @@
 final List<Map<String, String>> planets = [
-  {"name": "Sun", "image": "assets/sun.png"},
-  {"name": "Mercury", "image": "assets/mercury.png"},
-  {"name": "Venus", "image": "assets/venus.png"},
-  {"name": "Earth", "image": "assets/earth.png"},
-  {"name": "Mars", "image": "assets/mars.png"},
-  {"name": "Jupiter", "image": "assets/jupiter.png"},
-  {"name": "Saturn", "image": "assets/saturn.png"},
-  {"name": "Uranus", "image": "assets/uranus.png"},
-  {"name": "Neptune", "image": "assets/neptune.png"},
+  {"name": "Sun", "image": "assets/Images/sun.png", "model": "assets/3d_models/sun.glb"},
+  {"name": "Mercury", "image": "assets/Images/mercury.png", "model": "assets/3d_models/mercury.glb"},
+  {"name": "Venus", "image": "assets/Images/venus.png", "model": "assets/3d_models/venus.glb"},
+  {"name": "Earth", "image": "assets/Images/earth.png", "model": "assets/3d_models/earth.glb"},
+  {"name": "Mars", "image": "assets/Images/mars.png", "model": "assets/3d_models/mars.glb"},
+  {"name": "Jupiter", "image": "assets/Images/jupiter.png", "model": "assets/3d_models/jupiter.glb"},
+  {"name": "Saturn", "image": "assets/Images/saturn.png", "model": "assets/3d_models/saturn.glb"},
+  {"name": "Uranus", "image": "assets/Images/uranus.png", "model": "assets/3d_models/uranus.glb"},
+  {"name": "Neptune", "image": "assets/Images/neptune.png", "model": "assets/3d_models/neptune.glb"},
 ];
+
 
 final Map<String, String> planetDescriptions = {
   "Sun": "The Sun: Our Solar System's Star",

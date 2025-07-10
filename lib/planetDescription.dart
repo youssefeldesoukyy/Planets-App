@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'buttons.dart';
+import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 class PlanetDescription extends StatefulWidget {
   final String planetName;
   final String shortDescription;
   final String detailedDescription;
   final String imagePath;
+  final String modelPath;
 
-  const PlanetDescription({super.key, required this.planetName, required this.shortDescription, required this.imagePath, required this.detailedDescription});
+  const PlanetDescription({super.key, required this.planetName, required this.shortDescription, required this.imagePath, required this.detailedDescription, required this.modelPath});
 
   @override
   State<PlanetDescription> createState() => _PlanetDescriptionState();
@@ -27,7 +29,7 @@ class _PlanetDescriptionState extends State<PlanetDescription> {
           children: [
         Positioned.fill(
         child: Image.asset(
-          "assets/Rectangle 4.png",
+          "assets/Images/Rectangle 4.png",
           fit: BoxFit.cover,
         ),
       ),
@@ -97,11 +99,15 @@ class _PlanetDescriptionState extends State<PlanetDescription> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    widget.imagePath,
+                  SizedBox(
                     height: 350,
                     width: 350,
-                    fit: BoxFit.fill,
+                    child: ModelViewer(
+                      src: widget.modelPath,
+                      alt: "3D model of ${widget.planetName}",
+                      autoRotate: true,
+                      cameraControls: true,
+                    ),
                   ),
                   const SizedBox(height: 20),
                   const Padding(
@@ -133,7 +139,6 @@ class _PlanetDescriptionState extends State<PlanetDescription> {
               ),
             ),
           )
-
         ]
       ),
     );

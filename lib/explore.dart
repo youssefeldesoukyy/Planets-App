@@ -27,7 +27,7 @@ class ExploreState extends State<Explore> {
               children: [
                 Positioned.fill(
                   child: Image.asset(
-                    "assets/Rectangle 4.png",
+                    "assets/Images/Rectangle 4.png",
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -149,6 +149,7 @@ class ExploreState extends State<Explore> {
                           final name = planets[currentPage]['name']!;
                           final shortDescription = planetDescriptions[name] ?? '';
                           final imagePath = planets[currentPage]['image']!;
+                          final modelPath = planets[currentPage]['model']!;
                           final detailedDescription = planetDetails[name] ?? '';
 
                           Navigator.push(
@@ -158,6 +159,7 @@ class ExploreState extends State<Explore> {
                                 planetName: name,
                                 shortDescription: shortDescription,
                                 imagePath: imagePath,
+                                modelPath: modelPath,
                                 detailedDescription: detailedDescription,
                               ),
                             ),

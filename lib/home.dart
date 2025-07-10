@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
       backgroundColor: const Color(0xff0E0E0E),
       body: Stack(
         children: [
-          Image.asset("assets/home_image.png"),
+          Image.asset("assets/Images/home_image.png"),
           Container(
             alignment: Alignment.centerLeft,
             child: const Text(" Explore \n The \n Universe", style: TextStyle(
